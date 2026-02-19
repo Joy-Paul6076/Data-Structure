@@ -4,18 +4,18 @@ using namespace std;
 int main()
 {
     int i, j;
-    int a[3][3];
+    int a[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     int b[3][3] = {1, 3, 5, 7, 9, 2, 4, 6, 8};
 
-    cout << "Enter 9 numbers for array 'a':" << endl; 
-
+    cout << "Array 'a':" << endl;
     for(i = 0; i < 3; i++) {
         for(j = 0; j < 3; j++) {
-            cin >> a[i][j];
+            cout << a[i][j] << " ";
         }
+        cout << endl;
     }
 
-    cout << "Result:" << endl;
+    cout << "\nResult (a[i][j] + b[j][i]):" << endl;
 
     for(i = 0; i < 3; i++) {
         for(j = 0; j < 3; j++) {
