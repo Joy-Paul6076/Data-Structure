@@ -1,0 +1,16 @@
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+bin/
+obj/
+
+# Environment
+.env
