@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+// sorting in descending order
 void bubble_sort(int arr[], int n){
     for(int i=0; i<n-1;i++){
         for(int j = 0; j<n-i-1; j++){
@@ -10,6 +10,7 @@ void bubble_sort(int arr[], int n){
         }
     }
 }
+// sorting in descending order
 void selection_sort(int arr[], int n){
     for(int i=0; i<n-1; i++){
         int max_index = i;
