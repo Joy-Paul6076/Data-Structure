@@ -15,7 +15,7 @@ int main() {
     bool visited[10] = {false};
 
     cout << "Element | Frequency" << endl;
-    cout << "-------------------" << endl;
+    
 
     
     for (int i = 0; i < size; i++) {
