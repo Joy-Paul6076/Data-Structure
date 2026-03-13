@@ -1,5 +1,7 @@
 #include<iostream>
 using namespace std;
+// This program calculates the average marks of students and ranks them based on their average marks.
+// The students are then sorted based on their roll numbers in ascending order and their ranks are displayed.
  
 int average(int arr[], int n){
     int sum = 0;
