@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-// sorting in descending order
+// bUBBLE sorting in descending order
 void bubble_sort(int arr[], int n){
     for(int i=0; i<n-1;i++){
         for(int j = 0; j<n-i-1; j++){
@@ -10,7 +10,7 @@ void bubble_sort(int arr[], int n){
         }
     }
 }
-// sorting in descending order
+// selection sorting in descending order
 void selection_sort(int arr[], int n){
     for(int i=0; i<n-1; i++){
         int max_index = i;
@@ -24,6 +24,7 @@ void selection_sort(int arr[], int n){
         }
     }
 }
+// insertion sorting in descending order
 void insertion_sort(int arr[], int n){
     for(int i=1; i<n; i++){
         int key = arr[i];
@@ -46,11 +47,25 @@ cout<<"enter the elements of the array: ";
 for(int i=0; i<n; i++){
     cin>>arr[i];
 }
-bubble_sort(arr, n);
-cout<<"Sorted array: "<<endl;
-for(int i=0; i<n; i++){
-    cout << arr[i] << " ";
+
+cout<<"Enter the sorting algorithm you want to use: "<<endl;
+cout<<"1. Bubble Sort"<<endl;
+cout<<"2. Selection Sort"<<endl;
+cout<<"3. Insertion Sort"<<endl;
+int choice;
+cin>>choice;
+switch(choice){
+    case 1:
+        bubble_sort(arr, n);
+        break;
+    case 2:
+        selection_sort(arr, n);
+        break;
+    case 3:
+        insertion_sort(arr, n);
+        break;
+    default:
+        cout<<"Invalid choice!"<<endl;
 }
-cout << endl;
 return 0;
 }
