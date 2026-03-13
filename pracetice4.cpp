@@ -67,5 +67,9 @@ switch(choice){
     default:
         cout<<"Invalid choice!"<<endl;
 }
+cout<<"Sorted array in descending order: ";
+for(int i=0; i<n; i++){
+    cout<<arr[i]<<" ";
+}
 return 0;
 }
