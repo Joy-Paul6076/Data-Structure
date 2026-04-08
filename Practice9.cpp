@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//Write a program to take a string input from the user and print it using both array indexing and without using array indexing.
 
 int main(){
     string s;

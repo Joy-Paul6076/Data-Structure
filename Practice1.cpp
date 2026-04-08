@@ -1,6 +1,9 @@
 #include<iostream>
 #include<string>
 using namespace std;
+//Write a program to create a structure named Food_item with three members: food_item_name, Quantity, and price.
+//Then, create an array of structures to store information about multiple food items.
+//Finally, calculate and display the total price of all the food items based on their quantity and price.
 
 struct Food_item
 {
