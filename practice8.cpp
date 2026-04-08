@@ -12,6 +12,10 @@ int main(void){
     cin>>end;
 
     cout<<"The odd numbers between "<<start<<" and "<<end<<" are: ";
+    if(start>end){
+        cout<<"Invalid range. Starting value should be less than or equal to ending value.";
+        return 0;
+    }
     for(int i=start; i<=end; i++){
         if(i%2 != 0){
             cout<<i<<" ";
