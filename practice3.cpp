@@ -1,6 +1,6 @@
 #include <iostream>
-
 using namespace std;
+//Write a program to count the frequency of each element in an array.
 
 int main() {
     int size;

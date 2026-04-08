@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//Write a program to sort an array of integers in descending order using the selection sort algorithm.
 int count1=0,count2=0;
 
 void selection_sort(int arr[], int n){
