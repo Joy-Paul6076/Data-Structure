@@ -1,41 +1,31 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-//Write a program to count the frequency of each element in an array.
+//Writing a code that takes TWO parameters to print all the odd numbers 
+//between a given range. Input the starting value of the range and ending value of the range. 
+//Then, send them as the parameters to your function.
 
-int main() {
-    int size;
-    cout <<"Enter the number of elements in the array: ";
-    cin >> size;
-    int arr[10];
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < size; i++) {
-        cin >> arr[i];
+int main(void){
+    int start, end;
+    cout<<"Enter the starting value of the range: ";
+    cin>>start;
+    cout<<"Enter the ending value of the range: ";
+    cin>>end;
+
+    cout<<"The odd numbers between "<<start<<" and "<<end<<" are: ";
+    if(start>end){
+        cout<<"Invalid range. Starting value should be less than or equal to ending value.";
+        return 0;
     }
-
-    bool visited[10] = {false};
-
-    cout << "Element | Frequency" << endl;
-    
-
-    
-    for (int i = 0; i < size; i++) {
-        
-       
-        if (visited[i] == true) {
-            continue;
+    for(int i=start; i<=end; i++){
+        if(i%2 != 0){
+            cout<<i<<" ";
         }
-
-        int count = 1; 
-        for (int j = i + 1; j < size; j++) {
-            if (arr[i] == arr[j]) {
-                visited[j] = true;
-                count++;
-            }
-        }
-
-        
-        cout << "   " << arr[i] << "    |    " << count << endl;
     }
-
     return 0;
+
+
+    
+
+
+
 }

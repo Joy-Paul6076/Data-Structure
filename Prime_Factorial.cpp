@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-// Factorial of prime numbers
+//This program checks if a number is prime and calculates its factorial if it is prime.
 bool is_prime(int n){
     if(n<=1){
         return false;
