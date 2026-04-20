@@ -87,4 +87,5 @@ int main(void){
     }
     cout<<"Elements in the list: ";
     display(head);
+    return 0;
 }
