@@ -5,7 +5,7 @@ struct Queue{
     int front,rear,capacity;
     Queue(int size){
         capacity = size;
-        front = 0;
+        front = -1;
         rear = -1;
         arr = new int[capacity];
     }
@@ -17,14 +17,21 @@ bool isFull(Queue *q){
     return (q->rear == q->capacity - 1);
 }
 bool isEmpty(Queue *q){
-    return (q->front > q->rear);
+    return (q->front == -1 && q->rear == -1);
 }
 void enqueue(Queue *q, int n){
     if(isFull(q)){
         cout<<"Queue is full"<<endl;
         return;
     }
-    q->arr[++q->rear] = n;
+    if(isEmpty(q)){
+        q->front = 0;
+        q->rear = 0;
+        q->arr[q->rear] = n;
+    } else {
+        q->arr[++q->rear] = n;
+
+    }
 }
 void dequeue(Queue *q){
     if(isEmpty(q)){
@@ -32,6 +39,10 @@ void dequeue(Queue *q){
         return;
     }
     q->front++;
+    if(q->front > q->rear){
+        q->front = -1;
+        q->rear = -1;
+    }
 }
 int main(void){
     int size;

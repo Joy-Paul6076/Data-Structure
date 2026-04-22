@@ -6,7 +6,7 @@ struct CircularQueue{
     int front,rear,capacity;
     CircularQueue(int size){
         capacity = size;
-        front = 0;
+        front = -1;
         rear = -1;
         arr = new int[capacity];
     }
@@ -15,10 +15,10 @@ struct CircularQueue{
     }
 };
 bool isFull(CircularQueue *q){
-    return (q->rear == q->capacity - 1);
+    return ((q->rear + 1) % q->capacity == q->front);
 }
 bool isEmpty(CircularQueue *q){
-    return (q->front > q->rear);
+    return (q->front == -1 && q->rear == -1);
 }
 void enqueue(CircularQueue *q,int data){
     if(isFull(q)){
