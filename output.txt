@@ -1,1 +1,0 @@
-20)  ; Practice6.exe  ; type output.txt
