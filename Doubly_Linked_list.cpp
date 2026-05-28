@@ -34,24 +34,17 @@ void remove(Node **head, int n){
         cout<<"List is empty"<<endl;
         return;
     }
-    if((*head)->data == n){
-        Node *temp = *head;
-        *head = (*head)->next;
-        if(*head != nullptr){
-            (*head)->prev = nullptr;
-        }
-        delete temp;
-        return;
-    }
     Node *temp = *head;
-    while(temp->next != nullptr && temp->data != n){
+    while(temp != nullptr && temp->data != n){
         temp = temp->next;
     }
-    if(temp->next == nullptr && temp->data != n){
+    if(temp == nullptr){
         cout<<"Element not found"<<endl;
         return;
     }
-    temp->prev->next = temp->next;
+    if(temp->prev != nullptr){
+        temp->prev->next = temp->next;
+    }
     if(temp->next != nullptr){
         temp->next->prev = temp->prev;
     }

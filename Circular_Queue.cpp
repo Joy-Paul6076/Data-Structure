@@ -35,6 +35,16 @@ void dequeue(CircularQueue *q){
     }
     q->front = (q->front + 1) % q->capacity;
 }
+void display(CircularQueue *q){
+    if(isEmpty(q)){
+        cout<<"Queue is empty"<<endl;
+        return;
+    }
+    for(int i=q->front;i!=q->rear;i=(i+1)%q->capacity){
+        cout<<q->arr[i]<<" ";
+    }
+    cout<<endl;
+}
 int main(void){
     int size;
     cout<<"Enter the size of the queue: ";
